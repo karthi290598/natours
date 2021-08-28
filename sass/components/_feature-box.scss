@@ -1,0 +1,17 @@
+.feature-box {
+  background-color: $colour-white;
+  opacity: 80%;
+  padding: 2.5rem;
+  transition: all 0.3s;
+  text-align: center;
+  box-shadow: 0 0.5rem 4rem rgba($colour-black, 0.5);
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &__icons {
+    font-size: 5rem;
+    color: $colour-primary;
+  }
+}

@@ -37,6 +37,16 @@
     }
   }
 
+  &--green {
+    color: $colour-white;
+    background-color: $colour-primary;
+    letter-spacing: 0.5rem;
+
+    &::after {
+      background-color: $colour-primary;
+    }
+  }
+
   &::after {
     content: "";
     height: 100%;
