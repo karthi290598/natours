@@ -3,13 +3,29 @@
     padding: 25rem 0;
     margin-top: -20vh;
 
+    @include respond(tab-land) {
+        
+        
+        padding-bottom: 23rem;
+        margin-top: -15vh;
+    }
+   
+    @include respond(tab-port) {
+        
+        padding:  20rem 0 40rem 0 ;
+    }
 
 }
 
 
 .section-feature {
-    margin-top  : -15vh;
-    height: 95vh;
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+
+    & > * {
+        transform: skewY(7deg);
+    }
+    
     background-image: linear-gradient(
         to right bottom,
         rgba($colour-primary-light, 0.76),
@@ -18,16 +34,20 @@
       url(../img/hero.jpg);
     background-size: cover;
     background-position: center;
-    clip-path: polygon(0 15vh, 100% 0, 100% 75vh, 0 100%);
-    display: flex;
-   justify-content: center;
-   align-items: center;
+   
+    padding: 20rem 0;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+
+
 }
 
 
 .section-tours {
     background-color: $colour-grey-light-1;
-    margin-top: -25vh ;
+    margin-top: -10vh ;
     padding: 25rem 0 15rem 0 ;
 
 }
@@ -37,6 +57,10 @@
 
     padding: 15rem 0;
     position: relative;
+
+    @include respond(phone) {
+        padding: 10rem 0;
+    }
 }
 
 
@@ -56,13 +80,32 @@
      transparent 50%),
 
      url(../img/hero.jpg);
-    height: 50rem;
+   
     background-size: cover;
     border-radius: 3px  ;
+
+    @include respond(tab-port) {
+        background-image:
+        linear-gradient(105deg,
+        rgba($colour-white, 0.9) 50%,
+        rgba($colour-white, 0.9) 50% ),
+        url(../img/hero.jpg);
+   
+      
+   
+    }
+
 
     &__form{
         width: 50%;
         padding: 6rem;
+
+        @include respond(tab-port) {
+            width: 100%;
+            padding: 3rem;
+          
+       
+        }
     }
 }
 
@@ -74,6 +117,13 @@ padding: 5rem;
 
 &-main {
     display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-port) {
+        
+        flex-direction: column;
+    }
 
     &1 {
         flex:1;
@@ -101,6 +151,7 @@ padding: 5rem;
 
         &:not(:last-child){
             margin-right: 2rem;
+            text-align: center;
         }
     }
 
@@ -108,6 +159,10 @@ padding: 5rem;
 
 &-main2 {
 
+    @include respond(tab-port) {
+        
+        text-align: center;
+    }
 
 
     p {
@@ -117,6 +172,8 @@ padding: 5rem;
         width: 70%;
         font-size: 1.5rem;
         color: $colour-grey-light-1;
+
+      
     }
 }
 

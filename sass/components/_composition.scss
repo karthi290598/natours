@@ -1,6 +1,8 @@
 .composition{
 
     position: relative;
+
+  
     
 
 &__photo{
@@ -10,20 +12,22 @@
     position: absolute;
     transition: all 0.3s;
 
+  
     &--p1{
         top: -2rem;
-        left: 0;
-
+        left: 0;  
+   
         
     }
     &--p2{
         top: 2rem;
         right: 0;
+     
     }
     &--p3{
         top: 10rem;
         left: 20%;
-      
+     
     }
     &:hover{
         z-index: 1;
